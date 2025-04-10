@@ -326,30 +326,78 @@
             padding-right: 40px;
         }
         
+        .contact-info h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        
+        .contact-info p {
+            margin-bottom: 15px;
+            font-size: 16px;
+        }
+        
+        .contact-label {
+            font-weight: 600;
+            display: inline-block;
+            margin-right: 5px;
+        }
+        
+        .contact-hours {
+            margin-top: 20px;
+        }
+        
         .contact-form {
             flex: 1;
             min-width: 300px;
         }
         
+        .contact-form h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        
         .contact-form input,
         .contact-form textarea {
             width: 100%;
-            padding: 12px;
+            padding: 15px;
             margin-bottom: 15px;
             border: 1px solid #e6e6e6;
             border-radius: 0;
             font-family: 'Figtree', sans-serif;
+            font-size: 14px;
         }
         
         .contact-form textarea {
             height: 150px;
+            resize: vertical;
+        }
+        
+        .contact-form button {
+            display: inline-block;
+            background-color: #e2d3c8;
+            color: #4a4a4a;
+            padding: 15px 40px;
+            border: none;
+            border-radius: 0;
+            font-family: 'Figtree', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 14px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        
+        .contact-form button:hover {
+            background-color: #c3b1a9;
         }
         
         /* Footer */
         .footer {
             background-color: #4d4d4d;
             color: white;
-            padding: 70px 0 20px;
+            padding: 50px 0 20px;
         }
         
         .footer-content {
@@ -363,15 +411,23 @@
         
         .footer-col {
             flex: 1;
-            min-width: 250px;
-            margin-bottom: 40px;
-            padding: 0 20px;
+            min-width: 200px;
+            margin-bottom: 20px;
+            padding: 0 15px;
         }
         
         .footer-col h4 {
-            margin-bottom: 30px;
-            font-size: 20px;
+            margin-bottom: 25px;
+            font-size: 16px;
             font-weight: 600;
+            letter-spacing: 0.5px;
+        }
+        
+        .footer-col p {
+            font-size: 14px;
+            line-height: 1.5;
+            margin-bottom: 15px;
+            color: #e0e0e0;
         }
         
         .footer-col ul {
@@ -380,30 +436,35 @@
         }
         
         .footer-col ul li {
-            margin-bottom: 15px;
+            margin-bottom: 12px;
         }
         
         .footer-col a {
-            color: #f0f0f0;
+            color: #e0e0e0;
             text-decoration: none;
             transition: color 0.3s;
-            font-size: 16px;
+            font-size: 14px;
         }
         
         .footer-col a:hover {
             color: white;
         }
         
+        .footer-divider {
+            width: 100%;
+            height: 1px;
+            background-color: rgba(255,255,255,0.2);
+            margin: 15px auto 25px;
+            max-width: 1200px;
+        }
+        
         .copyright {
             text-align: center;
-            padding-top: 30px;
-            border-top: 1px solid rgba(255,255,255,0.2);
-            margin-top: 30px;
-            font-size: 14px;
-            color: #f0f0f0;
+            font-size: 13px;
+            color: #e0e0e0;
             max-width: 1200px;
-            margin: 30px auto 0;
-            padding: 20px;
+            margin: 0 auto;
+            padding: 0 20px 20px;
         }
         
         @media (max-width: 768px) {
@@ -434,8 +495,8 @@
 <body>
     <header class="header-container">
         <div class="logo-container">
-            <h1 class="therapist-name">Shalom Therapy</h1>
-            <p class="therapist-title">Kochi Therapist</p>
+            <h1 class="therapist-name">Manju George</h1>
+            <p class="therapist-title">Counselling Psychologist - Kochi</p>
         </div>
         <div class="nav-container">
             <ul class="nav-menu">
@@ -451,7 +512,7 @@
     <section id="home" class="hero-section">
         <div class="hero-content">
             <h1 class="hero-title">Shalom Therapy</h1>
-            <h2 class="hero-subtitle">Kochi</h2>
+            <h2 class="hero-subtitle">Manju George</h2>
         </div>
     </section>
 
@@ -459,9 +520,9 @@
         <h2 class="section-title">About Me</h2>
         <div class="about-content">
             <div class="about-text">
-                <p>At Shalom Therapy, I believe in a holistic approach to mental health that addresses the interconnected aspects of mind, body, and spirit. My practice is founded on the principle that true healing comes from understanding the whole person, not just treating symptoms.</p>
-                <p>As a licensed therapist, I combine evidence-based therapeutic methods with compassionate care to create a safe, supportive environment where growth and healing can occur. I am committed to helping my clients develop the insights and skills they need to overcome challenges and live more fulfilling lives.</p>
-                <p>Whether you're struggling with anxiety, depression, relationship issues, or life transitions, I'm here to support you on your journey to wellness and personal transformation.</p>
+                <p>I am a Counselling Psychologist with expertise in guiding individuals through emotional and personal growth challenges. At Shalom Therapy, I believe that true healing comes from understanding the whole person, not just treating symptoms.</p>
+                <p>With advanced degrees in Counselling and Developmental Psychology from the University of Kent, UK, and certifications in Person-Centered Psychotherapy and Special Needs Education, I offer a compassionate, client-focused approach that empowers you to discover your own solutions.</p>
+                <p>I provide a safe, supportive environment where you can explore your thoughts and feelings without judgment, developing the insights and skills needed to overcome challenges and live a more fulfilling life.</p>
             </div>
             <div class="about-image">
                 <!-- Placeholder for therapist image -->
@@ -474,27 +535,27 @@
         <div class="services-grid">
             <div class="service-card">
                 <h3>Individual Therapy</h3>
-                <p>Personalized therapy sessions tailored to address your unique needs and goals for mental health and personal growth.</p>
+                <p>Personalized therapy sessions using a person-centered approach that respects your unique perspective and empowers you to discover your own solutions for mental health and personal growth.</p>
             </div>
             <div class="service-card">
-                <h3>Anxiety Treatment</h3>
-                <p>Learn effective strategies to manage anxiety and reclaim a sense of calm and control in your life.</p>
+                <h3>Anxiety & Stress Management</h3>
+                <p>Evidence-based techniques including Cognitive Behavioral Therapy (CBT) and mindfulness interventions to help manage anxiety, reclaim calm, and develop effective stress management strategies.</p>
             </div>
             <div class="service-card">
-                <h3>Depression Therapy</h3>
-                <p>Find hope and healing through evidence-based approaches to treating depression and improving mood.</p>
+                <h3>Self-Esteem & Personal Growth</h3>
+                <p>Supportive guidance to address low self-esteem and build confidence, using motivational techniques and resilience training to help you recognize your worth and potential.</p>
             </div>
             <div class="service-card">
-                <h3>Trauma Recovery</h3>
-                <p>Gentle, trauma-informed therapy to help you process past experiences and move forward with healing.</p>
+                <h3>Grief Counselling</h3>
+                <p>Compassionate support through the grief process, helping you navigate loss and find healing with empathetic listening and specialized grief counselling techniques.</p>
             </div>
             <div class="service-card">
-                <h3>Stress Management</h3>
-                <p>Develop practical tools and techniques to reduce stress and enhance your overall wellbeing.</p>
+                <h3>Relationship Counselling</h3>
+                <p>Guidance for improving interpersonal relationships, enhancing communication skills, and developing healthier connections with others through increased self-awareness and empathy.</p>
             </div>
             <div class="service-card">
-                <h3>Life Transitions</h3>
-                <p>Support through significant life changes, helping you navigate uncertainty and find new direction and purpose.</p>
+                <h3>Special Needs Support</h3>
+                <p>Specialized assistance for children with exceptional needs and their families, using individualized strategies developed through extensive experience in special education.</p>
             </div>
         </div>
     </section>
@@ -503,16 +564,16 @@
         <h2 class="section-title">Client Testimonials</h2>
         <div class="testimonials-grid">
             <div class="testimonial-card">
-                <p class="testimonial-text">"Working with Shalom Therapy has been transformative. I've gained invaluable insights about myself and developed practical tools for managing my anxiety. I'm so grateful for the compassionate approach."</p>
-                <p class="testimonial-author">- Sarah K.</p>
+                <p class="testimonial-text">"Working with Ms. George has been transformative for my anxiety. Her person-centered approach and CBT techniques helped me gain valuable insights about myself and develop practical tools for managing stress. Her empathetic listening made all the difference."</p>
+                <p class="testimonial-author">- Priya M.</p>
             </div>
             <div class="testimonial-card">
-                <p class="testimonial-text">"After struggling with depression for years, I finally found the support I needed. The holistic approach addressed aspects of my wellbeing I hadn't considered before, and I'm now in a much better place."</p>
-                <p class="testimonial-author">- Michael T.</p>
+                <p class="testimonial-text">"As a parent of a child with special needs, I was struggling to find the right support. Ms. George's expertise in special education and her compassionate guidance has been invaluable for our family. She provided personalized strategies that have made a significant difference in our child's development."</p>
+                <p class="testimonial-author">- Rajesh T.</p>
             </div>
             <div class="testimonial-card">
-                <p class="testimonial-text">"The tools and guidance I received helped me understand myself better and communicate in ways I never could before. I've grown so much through this therapeutic journey."</p>
-                <p class="testimonial-author">- Jennifer R.</p>
+                <p class="testimonial-text">"After experiencing a significant loss, I found myself unable to cope with grief. Ms. George's gentle approach and specialized grief counselling techniques helped me navigate through this difficult period. Her mindfulness interventions and resilience training have been essential to my healing journey."</p>
+                <p class="testimonial-author">- Anita K.</p>
             </div>
         </div>
     </section>
@@ -523,13 +584,15 @@
             <div class="contact-info">
                 <h3>Get in Touch</h3>
                 <p>I'm here to answer your questions and help you begin your journey toward improved mental health and wellbeing.</p>
-                <p><strong>Email:</strong> info@shalomtherapy.com</p>
-                <p><strong>Phone:</strong> (555) 123-4567</p>
-                <p><strong>Address:</strong> 123 Healing Street, Suite 100<br>Kochi, Kerala 682001</p>
-                <p><strong>Hours:</strong><br>
-                Monday-Friday: 9am-7pm<br>
-                Saturday: 10am-3pm<br>
-                Sunday: Closed</p>
+                <p><span class="contact-label">Email:</span> info@shalomtherapy.in</p>
+                <p><span class="contact-label">Phone:</span> +91 9099056142</p>
+                <p><span class="contact-label">Address:</span> Kochi, Kerala 682020</p>
+                <div class="contact-hours">
+                    <p><span class="contact-label">Hours:</span></p>
+                    <p>Monday-Friday: 9am-7pm<br>
+                    Saturday: 10am-3pm<br>
+                    Sunday: Closed</p>
+                </div>
             </div>
             <div class="contact-form">
                 <h3>Send Me a Message</h3>
@@ -538,7 +601,7 @@
                     <input type="email" name="email" placeholder="Your Email" required>
                     <input type="tel" name="phone" placeholder="Your Phone Number">
                     <textarea name="message" placeholder="How can I help you?" required></textarea>
-                    <button type="submit" class="btn">Send Message</button>
+                    <button type="submit">SEND MESSAGE</button>
                 </form>
             </div>
         </div>
@@ -548,7 +611,7 @@
         <div class="footer-content">
             <div class="footer-col">
                 <h4>Shalom Therapy</h4>
-                <p>Providing compassionate, holistic mental health services to support you on your journey to wellness.</p>
+                <p>Providing compassionate, evidence-based counselling with expertise in guiding individuals through emotional and personal growth challenges.</p>
             </div>
             <div class="footer-col">
                 <h4>Quick Links</h4>
@@ -565,24 +628,25 @@
                 <h4>Services</h4>
                 <ul>
                     <li><a href="#services">Individual Therapy</a></li>
-                    <li><a href="#services">Anxiety Treatment</a></li>
-                    <li><a href="#services">Depression Therapy</a></li>
-                    <li><a href="#services">Trauma Recovery</a></li>
-                    <li><a href="#services">Stress Management</a></li>
+                    <li><a href="#services">Anxiety & Stress Management</a></li>
+                    <li><a href="#services">Self-Esteem & Personal Growth</a></li>
+                    <li><a href="#services">Grief Counselling</a></li>
+                    <li><a href="#services">Special Needs Support</a></li>
                 </ul>
             </div>
         </div>
+        <div class="footer-divider"></div>
         <div class="copyright">
             <p>&copy; 2023 Shalom Therapy. All rights reserved.</p>
         </div>
     </footer>
 
     <!-- JavaScript for potential dynamic elements -->
-    <script>
+        <script>
         // Simple script for handling mobile menu toggle
         document.addEventListener('DOMContentLoaded', function() {
             // Placeholder for future functionality
         });
-    </script>
+        </script>
 </body>
 </html> 
