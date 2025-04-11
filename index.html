@@ -409,6 +409,26 @@
             background-color: #c3b1a9;
         }
         
+        #form-status {
+            margin-top: 20px;
+            font-size: 16px;
+            font-weight: 500;
+        }
+        
+        .form-success {
+            color: #2ecc71;
+            padding: 10px;
+            border-left: 4px solid #2ecc71;
+            background-color: rgba(46, 204, 113, 0.1);
+        }
+        
+        .form-error {
+            color: #e74c3c;
+            padding: 10px;
+            border-left: 4px solid #e74c3c;
+            background-color: rgba(231, 76, 60, 0.1);
+        }
+        
         /* Footer */
         .footer {
             background-color: #4d4d4d;
@@ -541,7 +561,7 @@
                 <p>I provide a safe, supportive environment where you can explore your thoughts and feelings without judgment, developing the insights and skills needed to overcome challenges and live a more fulfilling life. My online therapy sessions are available to clients in Kochi and throughout India</p>
             </div>
             <div class="about-image">
-                <!-- Placeholder for therapist image -->
+                <img src="assets/profile_pic.jpg" alt="Manju George - Counselling Psychologist" style="width: 100%; height: 100%; object-fit: cover;">
             </div>
         </div>
     </section>
@@ -612,13 +632,15 @@
             </div>
             <div class="contact-form">
                 <h3>Send Me a Message</h3>
-                <form action="#" method="POST">
+                <form action="https://formspree.io/f/xqapwrdl" method="POST">
                     <input type="text" name="name" placeholder="Your Name" required>
                     <input type="email" name="email" placeholder="Your Email" required>
                     <input type="tel" name="phone" placeholder="Your Phone Number">
+                    <input type="hidden" name="_subject" value="New message from Shalom Therapy website">
                     <textarea name="message" placeholder="How can I help you?" required></textarea>
                     <button type="submit">SEND MESSAGE</button>
                 </form>
+                <p id="form-status"></p>
             </div>
         </div>
     </section>
@@ -659,9 +681,53 @@
 
     <!-- JavaScript for potential dynamic elements -->
         <script>
-        // Simple script for handling mobile menu toggle
         document.addEventListener('DOMContentLoaded', function() {
-            // Placeholder for future functionality
+            // Form handling
+            const contactForm = document.querySelector('.contact-form form');
+            const formStatus = document.getElementById('form-status');
+            
+            if (contactForm) {
+                contactForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    
+                    const formData = new FormData(contactForm);
+                    const submitButton = contactForm.querySelector('button[type="submit"]');
+                    
+                    // Disable the button and show loading state
+                    submitButton.disabled = true;
+                    submitButton.innerHTML = 'SENDING...';
+                    formStatus.innerHTML = '';
+                    
+                    fetch(contactForm.action, {
+                        method: 'POST',
+                        body: formData,
+                        headers: {
+                            'Accept': 'application/json'
+                        }
+                    })
+                    .then(response => {
+                        if (response.ok) {
+                            return response.json();
+                        }
+                        throw new Error('Network response was not ok.');
+                    })
+                    .then(data => {
+                        // Success message
+                        formStatus.innerHTML = '<div class="form-success">Thank you for your message! I will get back to you soon.</div>';
+                        contactForm.reset();
+                    })
+                    .catch(error => {
+                        // Error message
+                        formStatus.innerHTML = '<div class="form-error">Oops! There was a problem sending your message. Please try again or contact me directly via email or phone.</div>';
+                        console.error('Error:', error);
+                    })
+                    .finally(() => {
+                        // Reset button state
+                        submitButton.disabled = false;
+                        submitButton.innerHTML = 'SEND MESSAGE';
+                    });
+                });
+            }
         });
         </script>
         
