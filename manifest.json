@@ -1,0 +1,16 @@
+{
+  "name": "Shalom Therapy",
+  "short_name": "Shalom Therapy",
+  "description": "Professional counselling psychology services in Kochi by Manju George",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#ffffff",
+  "icons": [
+    {
+      "src": "assets/logo_favicon.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ]
+} 

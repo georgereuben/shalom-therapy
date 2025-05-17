@@ -11,30 +11,84 @@
     gtag('config', 'G-RYQK2GY1L6');
     </script>
     
+    <!-- Preload critical assets -->
+    <link rel="preload" href="assets/logo_favicon.png" as="image" type="image/png">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Figtree:wght@300;400;500;600;700&display=swap" as="style">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap" as="style">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap" as="style">
+    
+    <!-- Security headers -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' https: data: 'unsafe-inline' 'unsafe-eval';">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
+    <meta http-equiv="X-XSS-Protection" content="1; mode=block">
+    
+    <!-- PWA manifest -->
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#ffffff">
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Shalom Therapy",
+      "image": "https://www.shalomtherapy.in/images/shalom-therapy-og-image.jpg",
+      "description": "Professional online counselling in Kochi by Manju George. Expert therapist in Kochi offering online therapy sessions for anxiety, stress, relationships, and personal growth.",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Kochi",
+        "addressRegion": "Kerala",
+        "addressCountry": "IN"
+      },
+      "url": "https://www.shalomtherapy.in",
+      "priceRange": "₹₹",
+      "sameAs": [
+        "https://www.facebook.com/shalomtherapy",
+        "https://www.instagram.com/shalomtherapy"
+      ]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Manju George",
+      "jobTitle": "Counselling Psychologist",
+      "worksFor": {
+        "@type": "Organization",
+        "name": "Shalom Therapy"
+      },
+      "description": "Professional counselling psychologist providing mental health services in Kochi and online therapy across India."
+    }
+    </script>
+    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Shalom Therapy - Counselling Psychologist in Kochi | Mental Health Services</title>
-    <meta name="description" content="Professional counselling psychology services in Kochi by Manju George. Online therapy sessions for anxiety, stress, relationships, and personal growth across India.">
-    <meta name="keywords" content="kochi therapist, mental health kochi, online therapy, counselling, counselling kochi, psychologist kochi, Shalom Therapy">
+    <title>Therapist Kochi | Online Counselling Kochi | Shalom Therapy</title>
+    <meta name="description" content="Professional online counselling in Kochi by Manju George. Expert therapist in Kochi offering online therapy sessions for anxiety, stress, relationships, and personal growth.">
+    <meta name="keywords" content="therapist kochi, online counselling kochi, mental health kochi, online therapy, counselling, psychologist kochi, Shalom Therapy">
     <meta name="author" content="Manju George">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://www.shalomtherapy.in">
     <link rel="icon" type="image/avif" href="assets/logo_favicon.png">
     <link rel="icon" type="image/x-icon" href="assets/logo_favicon.png">
     <link rel="shortcut icon" type="image/x-icon" href="assets/logo_favicon.png">
-    <meta property="og:title" content="Shalom Therapy - Counselling Psychologist in Kochi">
-    <meta property="og:description" content="Professional counselling psychology services in Kochi. Online therapy sessions for anxiety, stress, relationships, and personal growth.">
+    <meta property="og:title" content="Therapist Kochi | Online Counselling Kochi | Shalom Therapy">
+    <meta property="og:description" content="Professional online counselling in Kochi by Manju George. Expert therapist in Kochi offering online therapy sessions for anxiety, stress, relationships, and personal growth.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://www.shalomtherapy.in">
     <meta property="og:image" content="https://www.shalomtherapy.in/images/shalom-therapy-og-image.jpg">
     <meta property="og:locale" content="en_IN">
     <meta property="og:site_name" content="Shalom Therapy">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Shalom Therapy - Counselling Psychologist in Kochi">
-    <meta name="twitter:description" content="Professional counselling psychology services in Kochi. Online therapy sessions for anxiety, stress, relationships, and personal growth.">
+    <meta name="twitter:title" content="Therapist Kochi | Online Counselling Kochi | Shalom Therapy">
+    <meta name="twitter:description" content="Professional online counselling in Kochi by Manju George. Expert therapist in Kochi offering online therapy sessions for anxiety, stress, relationships, and personal growth.">
     <meta name="twitter:image" content="https://www.shalomtherapy.in/images/shalom-therapy-og-image.jpg">
     <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml">
+    <link rel="alternate" href="https://www.shalomtherapy.in" hreflang="en-in" />
+    <meta name="geo.region" content="IN-KL" />
+    <meta name="geo.placename" content="Kochi" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:wght@300;400;500;600;700&display=swap">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap">
@@ -750,10 +804,11 @@
         {
           "@context": "https://schema.org",
           "@type": "LocalBusiness",
-          "name": "Shalom Therapy",
-          "image": "https://www.shalomtherapy.in/images/shalom-therapy-logo.jpg",
+          "name": "Shalom Therapy - Online Therapist Kochi",
+          "image": "https://www.shalomtherapy.in/images/shalom-therapy-og-image.jpg",
           "url": "https://www.shalomtherapy.in",
           "telephone": "+91 9099056142",
+          "description": "Professional online counselling in Kochi by Manju George. Expert therapist in Kochi offering online therapy sessions for anxiety, stress, relationships, and personal growth.",
           "address": {
             "@type": "PostalAddress",
             "streetAddress": "Kochi",
@@ -791,14 +846,14 @@
           "@context": "https://schema.org",
           "@type": "ProfessionalService",
           "name": "Shalom Therapy",
-          "description": "Counselling psychology services in Kochi by Manju George. Online therapy sessions for anxiety, stress, relationships, and personal growth.",
+          "description": "Professional online counselling in Kochi by Manju George. Expert therapist in Kochi offering online therapy sessions for anxiety, stress, relationships, and personal growth.",
           "provider": {
             "@type": "Person",
             "name": "Manju George",
-            "jobTitle": "Counselling Psychologist",
-            "description": "Counselling Psychologist with expertise in guiding individuals through emotional and personal growth challenges."
+            "jobTitle": "Therapist in Kochi",
+            "description": "Professional therapist in Kochi offering online counselling services for emotional and personal growth challenges."
           },
-          "serviceType": ["Counselling Psychology", "Online Therapy", "Mental Health Services"],
+          "serviceType": ["Online Counselling Kochi", "Therapist Kochi", "Online Therapy", "Mental Health Services"],
           "areaServed": [
             {
               "@type": "City",
