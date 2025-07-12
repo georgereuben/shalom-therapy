@@ -332,27 +332,56 @@
             background-color: #f8f6f2;
         }
         
-        .about-content {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
+        .therapists-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+            gap: 40px;
             max-width: 1200px;
             margin: 0 auto;
             padding: 0 20px;
         }
         
-        .about-text {
-            flex: 1;
-            min-width: 300px;
-            padding-right: 40px;
+        .therapist-card {
+            background-color: white;
+            border-radius: 0;
+            padding: 30px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.03);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
         }
         
-        .about-image {
-            flex: 1;
-            min-width: 300px;
-            background-color: #e8e8e8; /* Placeholder for image */
-            height: 400px;
-            border-radius: 0;
+        .therapist-image {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin-bottom: 20px;
+            border: 3px solid #e2d3c8;
+        }
+        
+        .therapist-info h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 28px;
+            color: #4a4a4a;
+            margin-bottom: 5px;
+        }
+        
+        .therapist-info h4 {
+            font-family: 'Figtree', sans-serif;
+            font-size: 16px;
+            color: #c3b1a9;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 20px;
+            font-weight: 500;
+        }
+        
+        .therapist-info p {
+            color: #777;
+            text-align: left;
+            margin-bottom: 15px;
         }
         
         /* Testimonials Section */
@@ -582,7 +611,18 @@
             .nav-menu li {
                 margin: 10px 0;
             }
-            .about-text, .contact-info {
+            .therapists-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+            .therapist-card {
+                padding: 20px;
+            }
+            .therapist-image {
+                width: 150px;
+                height: 150px;
+            }
+            .contact-info {
                 padding-right: 0;
                 margin-bottom: 40px;
             }
@@ -598,8 +638,8 @@
 <body>
     <header class="header-container">
         <div class="logo-container">
-            <h1 class="therapist-name">Manju George</h1>
-            <p class="therapist-title">Counselling Psychologist - Kochi</p>
+            <h1 class="therapist-name">Shalom Therapy</h1>
+            <p class="therapist-title">Professional Counselling Services - Kochi</p>
         </div>
         <div class="nav-container">
             <ul class="nav-menu">
@@ -615,20 +655,36 @@
     <section id="home" class="hero-section">
         <div class="hero-content">
             <h1 class="hero-title">Shalom Therapy</h1>
-            <h2 class="hero-subtitle">Manju George</h2>
+            <h2 class="hero-subtitle">Professional Counselling Services</h2>
         </div>
     </section>
 
     <section id="about" class="about-section">
-        <h2 class="section-title">About Me</h2>
-        <div class="about-content">
-            <div class="about-text">
-                <p>I am a Counselling Psychologist with expertise in guiding individuals through emotional and personal growth challenges. At Shalom Therapy, I believe that true healing comes from understanding the whole person, not just treating symptoms.</p>
-                <p>With advanced degrees in Counselling and Developmental Psychology from the University of Kent, UK and certifications in Person-Centered Psychotherapy and Special Needs Education, I offer a compassionate, client-focused approach that empowers you to discover your own solutions.</p>
-                <p>I provide a safe, supportive environment where you can explore your thoughts and feelings without judgment, developing the insights and skills needed to overcome challenges and live a more fulfilling life. My online therapy sessions are available to clients in Kochi and throughout India</p>
+        <h2 class="section-title">Meet Our Therapists</h2>
+        <div class="therapists-grid">
+            <div class="therapist-card">
+                <div class="therapist-image">
+                    <img src="assets/pfp.png" alt="Manju George - Counselling Psychologist" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+                <div class="therapist-info">
+                    <h3>Manju George</h3>
+                    <h4>Counselling Psychologist</h4>
+                    <p>Manju is a Counselling Psychologist with expertise in guiding individuals through emotional and personal growth challenges. At Shalom Therapy, she believes that true healing comes from understanding the whole person, not just treating symptoms.</p>
+                    <p>With advanced degrees in Counselling and Developmental Psychology from the University of Kent, UK and certifications in Person-Centered Psychotherapy and Special Needs Education, she offers a compassionate, client-focused approach that empowers you to discover your own solutions.</p>
+                    <p>She provides a safe, supportive environment where you can explore your thoughts and feelings without judgment, developing the insights and skills needed to overcome challenges and live a more fulfilling life. Her online therapy sessions are available to clients in Kochi and throughout India.</p>
+                </div>
             </div>
-            <div class="about-image">
-                <img src="assets/pfp.png" alt="Manju George - Counselling Psychologist" style="width: 100%; height: 100%; object-fit: cover;">
+            <div class="therapist-card">
+                <div class="therapist-image">
+                    <img src="assets/manushi_pfp.jpeg" alt="Manushi Parwani - Counselling Psychologist" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+                <div class="therapist-info">
+                    <h3>Manushi Parwani</h3>
+                    <h4>Counselling Psychologist & Life-Skills Trainer</h4>
+                    <p>Manushi is a counselling psychologist and life-skills trainer with expertise in providing safe spaces for emotional exploration and growth. With an M.Sc. in Counselling Psychology from CHRIST (Deemed to be) University, Delhi-NCR, and certification as a Person-Centered Therapist, she has trained under Meenakshi Kirtane (Director Psychodrama Institute of India and Maanas- The Inside Story).</p>
+                    <p>Her therapeutic approach is deeply-rooted in the Rogerian belief of humanistic approach and empathy. She uses an eclectic approach in her sessions, incorporating Person-centered Therapy and Solution-focused approach at its core. She has worked with clients ranging from 9 years old to 45 years old, with particular expertise in substance use issues, relationship issues, and anger management.</p>
+                    <p>If you are looking for a safe space to share and explore your thoughts, feelings and emotions, Manushi provides compassionate, client-focused support to help you navigate life's challenges.</p>
+                </div>
             </div>
         </div>
     </section>
