@@ -1,1 +1,1 @@
-### Static page assets for - [shalomtherapy.in](https://www.shalomtherapy.in)
+### Static page assets for - [shalom-therapy.com](https://www.shalom-therapy.com)

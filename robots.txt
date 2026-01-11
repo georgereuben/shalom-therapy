@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.shalomtherapy.in/sitemap.xml
+Sitemap: https://www.shalom-therapy.com/sitemap.xml

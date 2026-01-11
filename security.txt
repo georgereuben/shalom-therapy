@@ -1,4 +1,4 @@
-Contact: mailto:contact@shalomtherapy.in
+Contact: mailto:contact@shalom-therapy.com
 Expires: 2025-12-31T23:59:59.000Z
 Preferred-Languages: en
-Policy: https://www.shalomtherapy.in/security-policy 
+Policy: https://www.shalom-therapy.com/security-policy
