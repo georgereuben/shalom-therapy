@@ -577,30 +577,59 @@
         }
         
         .testimonials-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-            gap: 30px;
+            display: flex;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            -webkit-overflow-scrolling: touch;
+            gap: 24px;
             max-width: 1200px;
             margin: 0 auto;
-            padding: 0 20px;
+            padding: 0 20px 16px;
+            scrollbar-width: thin;
+            scrollbar-color: #e2d3c8 transparent;
         }
-        
+
+        .testimonials-grid::-webkit-scrollbar {
+            height: 4px;
+        }
+
+        .testimonials-grid::-webkit-scrollbar-track {
+            background: transparent;
+        }
+
+        .testimonials-grid::-webkit-scrollbar-thumb {
+            background-color: #e2d3c8;
+            border-radius: 2px;
+        }
+
         .testimonial-card {
             background-color: white;
-            border-radius: 0;
-            padding: 30px;
+            padding: 32px;
             box-shadow: 0 5px 15px rgba(0,0,0,0.03);
+            flex: 0 0 420px;
+            scroll-snap-align: start;
         }
-        
+
         .testimonial-text {
             font-style: italic;
-            margin-bottom: 20px;
+            margin-bottom: 16px;
             color: #777;
+            line-height: 1.8;
         }
-        
+
+        .testimonial-text:last-of-type {
+            margin-bottom: 24px;
+        }
+
         .testimonial-author {
             font-weight: 600;
             color: #4a4a4a;
+            margin-bottom: 4px;
+        }
+
+        .testimonial-location {
+            font-size: 13px;
+            color: #999;
         }
         
         /* Contact Section */
@@ -728,26 +757,24 @@
         }
 
         .booking-divider {
-            text-align: center;
-            margin: 20px 0;
-            position: relative;
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            margin: 24px 0;
         }
-        
-        .booking-divider::before {
+
+        .booking-divider::before,
+        .booking-divider::after {
             content: '';
-            position: absolute;
-            top: 50%;
-            left: 0;
-            right: 0;
+            flex: 1;
             height: 1px;
-            background-color: #ddd;
+            background-color: #e0e0e0;
         }
-        
+
         .booking-divider span {
-            background-color: #fcfcfc;
-            padding: 0 15px;
-            color: #666;
-            font-size: 14px;
+            color: #999;
+            font-size: 13px;
+            white-space: nowrap;
         }
         
         /* Footer */
@@ -874,7 +901,7 @@
 <body>
     <header class="header-container">
         <div class="logo-container">
-            <h1 class="therapist-name">Shalom Therapy</h1>
+            <div class="therapist-name">Shalom Therapy</div>
             <p class="therapist-title">Professional Counselling Services</p>
         </div>
         <div class="nav-container">
@@ -883,7 +910,6 @@
                 <li><a href="#about">ABOUT</a></li>
                 <li><a href="#services">SERVICES</a></li>
                 <li><a href="#life-skills">LIFE SKILLS FOR YOUNG PEOPLE</a></li>
-                <li><a href="#blog">BLOG</a></li>
                 <li><a href="#contact">BOOK NOW</a></li>
             </ul>
         </div>
@@ -913,7 +939,7 @@
         <div class="therapists-grid">
             <div class="therapist-card">
                 <div class="therapist-image">
-                    <img src="assets/pfp.png" alt="Manju George - Counselling Psychologist">
+                    <img src="assets/manju_george.jpg" alt="Manju George - Counselling Psychologist">
                 </div>
                 <div class="therapist-info">
                     <h3>Manju George</h3>
@@ -957,7 +983,7 @@
                 <h3>Life Skills for Young People</h3>
                 <p>Interactive online sessions empowering children and teenagers with emotional regulation, communication, decision-making, digital safety, and stress management. Especially designed for young people living abroad and children with special needs.</p>
             </div>
-            <div class="service-card">
+<div class="service-card">
                 <h3>Relationship Counselling</h3>
                 <p>Guidance for improving interpersonal relationships, enhancing communication skills, and developing healthier connections with others through increased self-awareness and empathy.</p>
             </div>
@@ -1025,16 +1051,25 @@
         <h2 class="section-title">Client Testimonials</h2>
         <div class="testimonials-grid">
             <div class="testimonial-card">
-                <p class="testimonial-text">"Manju madam, I'm so grateful for your guidance and support. Your counseling sessions helped me navigate through tough times and find my footing again. Your empathy and understanding gave me the strength to face my challenges head-on. You've been an incredible source of comfort and wisdom. Thank you for being there for me!"</p>
-                <p class="testimonial-author">- Akhil Nair</p>
+                <p class="testimonial-text">"We are deeply grateful to Shalom Therapy for the incredible support they have provided our child. A special thank you to Ms. Manju ma'am, whose kindness and warmth truly set her apart. Her ability to adapt to each child's needs is remarkable she meets them where they are and grows with them, adjusting her approach with care and understanding.</p>
+                <p class="testimonial-text">What stands out most is her patience and dedication. She listens truly listens no matter how long it takes, and is always reachable when we need guidance. Her gentle, sweet-spoken nature makes children feel safe, heard, and valued. She has a natural way of connecting with kids, building trust and rapport that makes every session meaningful.</p>
+                <p class="testimonial-text">Through multiple sessions, we've seen a genuine transformation in our child. Her non-judgmental perspective, along with her understanding of both local and global cultural influences, allows her to guide teenagers with insight and empathy.</p>
+                <p class="testimonial-text">Ms. Manju ma'am has been a steady source of support for our family, and we are sincerely thankful for the positive impact she has had on our child's growth and well-being."</p>
+                <p class="testimonial-author">Dr. Athira Hareendran Nair</p>
+                <p class="testimonial-location">Glasgow, Scotland</p>
             </div>
             <div class="testimonial-card">
-                <p class="testimonial-text">"Ms. George, I'll never forget how you were there for me when I needed it most. Your kindness, patience, and understanding helped me through a really tough time. You showed me that I wasn't alone, and that meant the world. Thank you for being such a caring and compassionate presence in my life"</p>
-                <p class="testimonial-author">- Neena Rastogi</p>
+                <p class="testimonial-text">"Therapy with Manju ma'am has been life-changing for me during a period when I felt overwhelmed, emotionally unstable, and struggled with intense shifts of anger and sadness. She helped me build deep self-awareness, understand my triggers, and regain control of my daily life.</p>
+                <p class="testimonial-text">With her support, I learned to let go of guilt about being myself, set firm boundaries, and rebuild my self-respect. I stopped accepting being reduced to a 'WhatsApp joke wife' and started standing fully in my identity with clarity and dignity.</p>
+                <p class="testimonial-text">I've grown into a more confident, ambitious, and emotionally strong woman. I am now a braver, more communicative mother who is healing childhood trauma while becoming more grounded in who I am. I told my family clearly that I will not fight them just to get through a day, but I will be in the frontline to fight against the world for them.</p>
+                <p class="testimonial-text">Overall, I feel stronger, more self-aware, and empowered in how I live, love, and show up in my life."</p>
+                <p class="testimonial-author">Sherine</p>
+                <p class="testimonial-location">Auckland, New Zealand</p>
             </div>
             <div class="testimonial-card">
-                <p class="testimonial-text">"Manushi's sessions have been incredibly helpful for me. Her warm and understanding approach made me feel safe to open up about my struggles. She helped me work through my relationship issues with such patience and insight. I truly appreciate her support and guidance during a difficult time in my life."</p>
-                <p class="testimonial-author">- Priya S.</p>
+                <p class="testimonial-text">"We had a great experience when we started with life skills sessions for my kid who was stepping into teenage. The sessions helped him to be more confident and also to cope with the new school environment in a different country. It is much appreciated that Manju Ma'am patiently listens to us, spends time in understanding the situations and comes up with sessions to tackle those. In this world of business-minded people, she is a gem. Thanks!"</p>
+                <p class="testimonial-author">Parvathy R</p>
+                <p class="testimonial-location">Holbæk, Denmark</p>
             </div>
         </div>
     </section>
@@ -1047,7 +1082,7 @@
                 <p>We're here to answer your questions and help you begin your journey toward improved mental health and wellbeing.</p>
                 <p><span class="contact-label">Email:</span> info@shalom-therapy.com</p>
                 <p><span class="contact-label">Phone:</span> +91 7907290207</p>
-                <p><span class="contact-label">Location:</span> Kerala, India</p>
+                <p><span class="contact-label">Location:</span> Kochi, Kerala, India</p>
                 <div class="contact-hours">
                     <p><span class="contact-label">Hours:</span></p>
                     <p>Monday-Friday: 9am-7pm<br>
@@ -1074,7 +1109,7 @@
                     <input type="email" name="email" placeholder="Your Email" required>
                     <input type="tel" name="phone" placeholder="Your Phone Number">
                     <input type="hidden" name="_subject" value="New message from Shalom Therapy website">
-                    <textarea name="message" placeholder="How can we help you?" required></textarea>
+                    <textarea name="message" placeholder="How can we help you?" required>Hi, I'm interested in booking a session and would love to find out more.</textarea>
                     <button type="submit">SEND MESSAGE</button>
                 </form>
                 <p id="form-status"></p>
@@ -1096,7 +1131,6 @@
                     <li><a href="#services">Services</a></li>
                     <li><a href="#life-skills">Life Skills for Young People</a></li>
                     <li><a href="#testimonials">Testimonials</a></li>
-                    <li><a href="#blog">Blog</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
             </div>
@@ -1106,8 +1140,7 @@
                     <li><a href="#services">Individual Therapy</a></li>
                     <li><a href="#services">Anxiety &amp; Stress Management</a></li>
                     <li><a href="#services">Self-Esteem &amp; Personal Growth</a></li>
-                    <li><a href="#services">Grief Counselling</a></li>
-                    <li><a href="#services">Relationship Counselling</a></li>
+<li><a href="#services">Relationship Counselling</a></li>
                     <li><a href="#services">Special Needs Support</a></li>
                     <li><a href="#life-skills">Life Skills for Young People</a></li>
                 </ul>
@@ -1115,7 +1148,7 @@
         </div>
         <div class="footer-divider"></div>
         <div class="copyright">
-            <p>&copy; 2023 Shalom Therapy. All rights reserved.</p>
+            <p>&copy; 2026 Shalom Therapy. All rights reserved.</p>
         </div>
     </footer>
 
@@ -1179,7 +1212,7 @@
           "name": "Shalom Therapy - Online Therapist Kochi",
           "image": "https://www.shalom-therapy.com/images/shalom-therapy-og-image.jpg",
           "url": "https://www.shalom-therapy.com",
-          "telephone": "+91 9099056142",
+          "telephone": "+91 7907290207",
           "description": "Professional online counselling and life skills training for young people in Kochi by Manju George. Expert therapist offering therapy for anxiety, stress, relationships, personal growth, and life skills programmes for teens and children living abroad and children with special needs.",
           "address": {
             "@type": "PostalAddress",
@@ -1261,14 +1294,7 @@
                   "name": "Self-Esteem & Personal Growth"
                 }
               },
-              {
-                "@type": "Offer",
-                "itemOffered": {
-                  "@type": "Service",
-                  "name": "Grief Counselling"
-                }
-              },
-              {
+{
                 "@type": "Offer",
                 "itemOffered": {
                   "@type": "Service",
