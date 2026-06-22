@@ -32,7 +32,7 @@
       "@context": "https://schema.org",
       "@type": "LocalBusiness",
       "name": "Shalom Therapy",
-      "image": "https://www.shalom-therapy.com/images/shalom-therapy-og-image.jpg",
+      "image": "https://www.shalom-therapy.com/assets/shalom-therapy-og-image.jpg",
       "description": "Professional online counselling and life skills training for young people by Manju George. Expert therapist in Kochi offering therapy for anxiety, stress, relationships, personal growth, and life skills training for teenagers and children abroad and children with special needs.",
       "address": {
         "@type": "PostalAddress",
@@ -78,13 +78,13 @@
     <meta property="og:description" content="Professional online counselling and life skills training for young people by Manju George, Kochi. Therapy for anxiety, stress, relationships, and personal growth. Life skills programmes for teens and children living abroad and children with special needs.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://www.shalom-therapy.com">
-    <meta property="og:image" content="https://www.shalom-therapy.com/images/shalom-therapy-og-image.jpg">
+    <meta property="og:image" content="https://www.shalom-therapy.com/assets/shalom-therapy-og-image.jpg">
     <meta property="og:locale" content="en_IN">
     <meta property="og:site_name" content="Shalom Therapy">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Professional Online Counselling &amp; Life Skills Training for Young People | Shalom Therapy">
     <meta name="twitter:description" content="Professional online counselling and life skills training for young people by Manju George, Kochi. Therapy for anxiety, stress, relationships, and personal growth.">
-    <meta name="twitter:image" content="https://www.shalom-therapy.com/images/shalom-therapy-og-image.jpg">
+    <meta name="twitter:image" content="https://www.shalom-therapy.com/assets/shalom-therapy-og-image.jpg">
     <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml">
     <link rel="alternate" href="https://www.shalom-therapy.com" hreflang="en-in" />
     <meta name="geo.region" content="IN-KL" />
@@ -632,6 +632,65 @@
             color: #999;
         }
         
+        /* Blog Section */
+        .blog-section {
+            padding: 80px 0;
+            background-color: #fcfcfc;
+        }
+
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(420px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .blog-card {
+            background-color: white;
+            padding: 36px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.03);
+            transition: transform 0.3s;
+        }
+
+        .blog-card:hover {
+            transform: translateY(-3px);
+        }
+
+        .blog-card-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 22px;
+            color: #4a4a4a;
+            margin-bottom: 16px;
+            font-weight: 500;
+            line-height: 1.4;
+        }
+
+        .blog-card-excerpt {
+            color: #777;
+            line-height: 1.75;
+            margin-bottom: 24px;
+            font-size: 15px;
+        }
+
+        .blog-read-more {
+            display: inline-block;
+            color: #4a4a4a;
+            text-decoration: none;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            font-size: 12px;
+            border-bottom: 1px solid #c3b1a9;
+            padding-bottom: 2px;
+            transition: color 0.3s, border-color 0.3s;
+        }
+
+        .blog-read-more:hover {
+            color: #c3b1a9;
+        }
+
         /* Contact Section */
         .contact-section {
             padding: 80px 0;
@@ -910,6 +969,7 @@
                 <li><a href="#about">ABOUT</a></li>
                 <li><a href="#services">SERVICES</a></li>
                 <li><a href="#life-skills">LIFE SKILLS FOR YOUNG PEOPLE</a></li>
+                <li><a href="#blog">BLOG</a></li>
                 <li><a href="#contact">BOOK NOW</a></li>
             </ul>
         </div>
@@ -939,7 +999,7 @@
         <div class="therapists-grid">
             <div class="therapist-card">
                 <div class="therapist-image">
-                    <img src="assets/manju_george.jpg" alt="Manju George - Counselling Psychologist">
+                    <img src="assets/manju_george.jpg" alt="Manju George, Counselling Psychologist at Shalom Therapy, Kochi" width="1079" height="875" loading="lazy" decoding="async">
                 </div>
                 <div class="therapist-info">
                     <h3>Manju George</h3>
@@ -951,7 +1011,7 @@
             </div>
             <div class="therapist-card">
                 <div class="therapist-image">
-                    <img src="assets/manushi_pfp.png" alt="Manushi Parwani - Counselling Psychologist">
+                    <img src="assets/manushi_pfp.png" alt="Manushi Parwani, Counselling Psychologist at Shalom Therapy" width="1036" height="978" loading="lazy" decoding="async">
                 </div>
                 <div class="therapist-info">
                     <h3>Manushi Parwani</h3>
@@ -1074,6 +1134,66 @@
         </div>
     </section>
 
+    <section id="blog" class="blog-section">
+        <h2 class="section-title">From the Blog</h2>
+        <div class="blog-grid">
+            <div class="blog-card">
+                <h3 class="blog-card-title">Challenges Faced by Indian Teens Abroad: What We Often Overlook</h3>
+                <p class="blog-card-excerpt">When Indian families move abroad, the focus is usually on opportunity. But quietly, many teenagers are navigating a far more complex emotional landscape — one of identity, belonging, and unspoken pressure.</p>
+                <a href="blog-challenges-indian-teens-abroad.html" class="blog-read-more">Read More</a>
+            </div>
+            <div class="blog-card">
+                <h3 class="blog-card-title">Why Our Teens Need Life Skills Training Now More Than Ever</h3>
+                <p class="blog-card-excerpt">Good marks matter, but they're not enough. In 2026, more than half of Indian teens feel overwhelmed by exams, social media, and life pressures. Life skills are what help our kids feel strong inside, make good choices, and build happy relationships.</p>
+                <a href="blog-teens-life-skills-training.html" class="blog-read-more">Read More</a>
+            </div>
+        </div>
+    </section>
+
+    <style>
+        .faq-section { padding: 60px 20px; max-width: 820px; margin: 0 auto; }
+        .faq-item { border-bottom: 1px solid #ececec; }
+        .faq-item summary {
+            font-family: 'Playfair Display', serif;
+            font-size: 19px; color: #3a3a3a; cursor: pointer;
+            padding: 22px 40px 22px 0; position: relative; list-style: none;
+        }
+        .faq-item summary::-webkit-details-marker { display: none; }
+        .faq-item summary::after {
+            content: '+'; position: absolute; right: 6px; top: 18px;
+            font-size: 26px; color: #c9b89a; transition: transform 0.2s ease;
+        }
+        .faq-item[open] summary::after { content: '\2212'; }
+        .faq-item p { margin: 0 0 22px 0; color: #6a6a6a; font-size: 16px; line-height: 1.7; }
+    </style>
+    <section id="faq" class="faq-section">
+        <h2 class="section-title">Frequently Asked Questions</h2>
+        <details class="faq-item">
+            <summary>Do you offer online counselling and therapy in Kochi?</summary>
+            <p>Yes. Shalom Therapy is based in Kochi, Kerala, and offers secure online counselling sessions to clients throughout India and abroad. You can attend sessions from anywhere with a private space and an internet connection.</p>
+        </details>
+        <details class="faq-item">
+            <summary>What issues can counselling help with?</summary>
+            <p>We support adults and young people with anxiety, stress, low self-esteem, relationship difficulties, grief, personal growth, and substance-use and anger-related concerns. We also offer life skills training for children and teenagers and specialised support for children with special needs.</p>
+        </details>
+        <details class="faq-item">
+            <summary>How much does a counselling session cost?</summary>
+            <p>We offer a free initial consultation so you can decide if it feels right before committing. Session fees are kept affordable and are shared when you book. You can book a free discovery call online to discuss your needs and pricing.</p>
+        </details>
+        <details class="faq-item">
+            <summary>Is what I share in therapy confidential?</summary>
+            <p>Yes. Sessions are private and confidential. What you share stays between you and your therapist, within the standard ethical and legal limits of professional counselling practice.</p>
+        </details>
+        <details class="faq-item">
+            <summary>Do you offer life skills training for teenagers living abroad (NRI families)?</summary>
+            <p>Yes. We run interactive online life skills programmes designed especially for Indian children and teenagers living abroad, helping them with cultural adaptation, emotional regulation, communication, confidence, and digital safety. Having lived and worked with NRI students abroad, Manju brings first-hand understanding to these sessions.</p>
+        </details>
+        <details class="faq-item">
+            <summary>How do I book a session?</summary>
+            <p>You can schedule online through our booking link, or send a message via the contact form below. We'll get back to you to confirm a time that works for you.</p>
+        </details>
+    </section>
+
     <section id="contact" class="contact-section">
         <h2 class="section-title">Contact Us</h2>
         <div class="contact-content">
@@ -1131,6 +1251,7 @@
                     <li><a href="#services">Services</a></li>
                     <li><a href="#life-skills">Life Skills for Young People</a></li>
                     <li><a href="#testimonials">Testimonials</a></li>
+                    <li><a href="#blog">Blog</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
             </div>
@@ -1210,7 +1331,7 @@
           "@context": "https://schema.org",
           "@type": "LocalBusiness",
           "name": "Shalom Therapy - Online Therapist Kochi",
-          "image": "https://www.shalom-therapy.com/images/shalom-therapy-og-image.jpg",
+          "image": "https://www.shalom-therapy.com/assets/shalom-therapy-og-image.jpg",
           "url": "https://www.shalom-therapy.com",
           "telephone": "+91 7907290207",
           "description": "Professional online counselling and life skills training for young people in Kochi by Manju George. Expert therapist offering therapy for anxiety, stress, relationships, personal growth, and life skills programmes for teens and children living abroad and children with special needs.",
@@ -1242,7 +1363,58 @@
             }
           ],
           "priceRange": "\u20b9\u20b9",
-          "sameAs": []
+          "sameAs": [
+            "https://www.facebook.com/shalomtherapy",
+            "https://www.instagram.com/shalomtherapy"
+          ],
+          "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "5.0",
+            "reviewCount": "3",
+            "bestRating": "5",
+            "worstRating": "1"
+          },
+          "review": [
+            {
+              "@type": "Review",
+              "reviewRating": {
+                "@type": "Rating",
+                "ratingValue": "5",
+                "bestRating": "5"
+              },
+              "author": {
+                "@type": "Person",
+                "name": "Dr. Athira Hareendran Nair"
+              },
+              "reviewBody": "We are deeply grateful to Shalom Therapy for the incredible support they have provided our child. A special thank you to Manju ma'am, whose kindness and warmth truly set her apart. Her ability to adapt to each child's needs is remarkable. Through multiple sessions, we've seen a genuine transformation in our child."
+            },
+            {
+              "@type": "Review",
+              "reviewRating": {
+                "@type": "Rating",
+                "ratingValue": "5",
+                "bestRating": "5"
+              },
+              "author": {
+                "@type": "Person",
+                "name": "Sherine"
+              },
+              "reviewBody": "Therapy with Manju ma'am has been life-changing. She helped me build deep self-awareness, understand my triggers, and regain control of my daily life. I've grown into a more confident, ambitious, and emotionally strong woman."
+            },
+            {
+              "@type": "Review",
+              "reviewRating": {
+                "@type": "Rating",
+                "ratingValue": "5",
+                "bestRating": "5"
+              },
+              "author": {
+                "@type": "Person",
+                "name": "Parvathy R"
+              },
+              "reviewBody": "We had a great experience with the life skills sessions for my kid who was stepping into teenage. The sessions helped him be more confident and cope with a new school environment in a different country. Manju ma'am patiently listens and comes up with sessions to tackle each situation."
+            }
+          ]
         }
         </script>
         
@@ -1317,6 +1489,63 @@
               }
             ]
           }
+        }
+        </script>
+
+        <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Do you offer online counselling and therapy in Kochi?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes. Shalom Therapy is based in Kochi, Kerala, and offers secure online counselling sessions to clients throughout India and abroad. You can attend sessions from anywhere with a private space and an internet connection."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "What issues can counselling help with?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "We support adults and young people with anxiety, stress, low self-esteem, relationship difficulties, grief, personal growth, and substance-use and anger-related concerns. We also offer life skills training for children and teenagers and specialised support for children with special needs."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How much does a counselling session cost?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "We offer a free initial consultation so you can decide if it feels right before committing. Session fees are kept affordable and are shared when you book. You can book a free discovery call online to discuss your needs and pricing."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Is what I share in therapy confidential?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes. Sessions are private and confidential. What you share stays between you and your therapist, within the standard ethical and legal limits of professional counselling practice."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Do you offer life skills training for teenagers living abroad (NRI families)?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes. We run interactive online life skills programmes designed especially for Indian children and teenagers living abroad, helping them with cultural adaptation, emotional regulation, communication, confidence, and digital safety."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How do I book a session?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "You can schedule online through our booking link, or send a message via the contact form. We'll get back to you to confirm a time that works for you."
+              }
+            }
+          ]
         }
         </script>
 </body>
