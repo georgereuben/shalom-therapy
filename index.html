@@ -93,6 +93,10 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap">
     <style>
+        *, *::before, *::after {
+            box-sizing: border-box;
+        }
+
         body {
             font-family: 'Figtree', sans-serif;
             margin: 0;
@@ -100,6 +104,7 @@
             color: #4a4a4a;
             line-height: 1.6;
             background-color: #fafafa;
+            overflow-x: hidden;
         }
         
         /* Header Styles */
@@ -910,22 +915,105 @@
             padding: 0 20px 20px;
         }
         
+        /* Hamburger menu */
+        .nav-toggle {
+            display: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 8px;
+            flex-direction: column;
+            gap: 5px;
+            align-self: center;
+        }
+
+        .nav-toggle span {
+            display: block;
+            width: 24px;
+            height: 2px;
+            background-color: #4a4a4a;
+            transition: all 0.3s ease;
+        }
+
+        .nav-toggle.open span:nth-child(1) {
+            transform: translateY(7px) rotate(45deg);
+        }
+
+        .nav-toggle.open span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .nav-toggle.open span:nth-child(3) {
+            transform: translateY(-7px) rotate(-45deg);
+        }
+
         @media (max-width: 768px) {
+            /* Nav: hamburger */
+            .nav-toggle {
+                display: flex;
+            }
+            .nav-menu {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                margin-top: 16px;
+                padding-bottom: 8px;
+                border-top: 1px solid #f0f0f0;
+            }
+            .nav-menu.open {
+                display: flex;
+            }
+            .nav-menu li {
+                margin: 12px 0;
+            }
             .nav-container {
                 flex-direction: column;
                 text-align: center;
             }
-            .nav-menu {
-                margin-top: 20px;
-                flex-direction: column;
+
+            /* Hero */
+            .hero-title {
+                font-size: 44px;
             }
-            .nav-menu li {
-                margin: 10px 0;
+            .hero-subtitle {
+                font-size: 26px;
+            }
+            .hero-section {
+                padding: 50px 0;
+            }
+            .hero-paths {
+                flex-direction: column;
+                align-items: center;
+            }
+            .hero-path-card {
+                min-width: unset;
+                width: 100%;
+                max-width: 340px;
+            }
+
+            /* Typography */
+            .section-title {
+                font-size: 30px;
+                margin-bottom: 30px;
+                padding: 0 20px;
+            }
+
+            /* Grids */
+            .blog-grid {
+                grid-template-columns: 1fr;
+            }
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+            .life-skills-grid {
+                grid-template-columns: 1fr;
             }
             .therapists-grid {
                 grid-template-columns: 1fr;
                 gap: 30px;
             }
+
+            /* Therapist cards */
             .therapist-card {
                 padding: 20px;
             }
@@ -933,26 +1021,37 @@
                 width: 150px;
                 height: 150px;
             }
+
+            /* Contact */
+            .contact-content {
+                flex-direction: column;
+            }
             .contact-info {
                 padding-right: 0;
                 margin-bottom: 40px;
             }
-            .hero-title {
-                font-size: 48px;
-            }
-            .hero-subtitle {
-                font-size: 28px;
-            }
-            .hero-paths {
-                flex-direction: column;
-                align-items: center;
-            }
-            .hero-path-card {
-                min-width: 280px;
-                max-width: 100%;
-            }
+
+            /* Life Skills */
             .life-skills-special {
                 padding: 28px 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-title {
+                font-size: 34px;
+            }
+            .hero-subtitle {
+                font-size: 22px;
+            }
+            .section-title {
+                font-size: 26px;
+            }
+            .blog-card {
+                padding: 24px;
+            }
+            .testimonial-card {
+                flex: 0 0 85vw;
             }
         }
     </style>
@@ -964,6 +1063,11 @@
             <p class="therapist-title">Professional Counselling Services</p>
         </div>
         <div class="nav-container">
+            <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
             <ul class="nav-menu">
                 <li><a href="#home" class="active">HOME</a></li>
                 <li><a href="#about">ABOUT</a></li>
@@ -1277,6 +1381,24 @@
     <!-- JavaScript for potential dynamic elements -->
         <script>
         document.addEventListener('DOMContentLoaded', function() {
+            // Hamburger menu
+            const navToggle = document.querySelector('.nav-toggle');
+            const navMenu = document.querySelector('.nav-menu');
+            if (navToggle && navMenu) {
+                navToggle.addEventListener('click', function() {
+                    const isOpen = navMenu.classList.toggle('open');
+                    navToggle.classList.toggle('open', isOpen);
+                    navToggle.setAttribute('aria-expanded', isOpen);
+                });
+                navMenu.querySelectorAll('a').forEach(function(link) {
+                    link.addEventListener('click', function() {
+                        navMenu.classList.remove('open');
+                        navToggle.classList.remove('open');
+                        navToggle.setAttribute('aria-expanded', 'false');
+                    });
+                });
+            }
+
             // Form handling
             const contactForm = document.querySelector('.contact-form form');
             const formStatus = document.getElementById('form-status');
