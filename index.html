@@ -177,26 +177,6 @@
         .nav-menu a.active {
             color: #c3b1a9;
         }
-
-        /* Header booking button */
-        .nav-menu {
-            align-items: center;
-            flex-wrap: wrap;
-            row-gap: 10px;
-        }
-
-        .nav-menu a.nav-cta {
-            display: inline-block;
-            background-color: #4a4a4a;
-            color: #f8f6f2;
-            padding: 10px 18px;
-            transition: background-color 0.3s, color 0.3s;
-        }
-
-        .nav-menu a.nav-cta:hover {
-            background-color: #2d2d2d;
-            color: #ffffff;
-        }
         
         /* Hero Section */
         .hero-section {
@@ -234,12 +214,6 @@
         /* Hero booking button */
         .hero-cta {
             margin: 0 auto 10px;
-        }
-
-        .hero-cta-note {
-            font-size: 14px;
-            color: #5a5a5a;
-            margin: 12px 0 0;
         }
 
         /* Hero path cards */
@@ -585,12 +559,30 @@
         }
         
         .therapists-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
-            gap: 40px;
+            display: flex;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            scroll-padding-inline: 20px;
+            -webkit-overflow-scrolling: touch;
+            gap: 30px;
             max-width: 1200px;
             margin: 0 auto;
-            padding: 0 20px;
+            padding: 0 20px 16px;
+            scrollbar-width: thin;
+            scrollbar-color: #e2d3c8 transparent;
+        }
+
+        .therapists-grid::-webkit-scrollbar {
+            height: 4px;
+        }
+
+        .therapists-grid::-webkit-scrollbar-track {
+            background: transparent;
+        }
+
+        .therapists-grid::-webkit-scrollbar-thumb {
+            background-color: #e2d3c8;
+            border-radius: 2px;
         }
         
         .therapist-card {
@@ -602,6 +594,8 @@
             flex-direction: column;
             align-items: center;
             text-align: center;
+            flex: 1 0 340px;
+            scroll-snap-align: start;
         }
         
         .therapist-image {
@@ -1115,8 +1109,11 @@
                 grid-template-columns: 1fr;
             }
             .therapists-grid {
-                grid-template-columns: 1fr;
-                gap: 30px;
+                gap: 20px;
+                align-items: flex-start;
+            }
+            .therapist-card {
+                flex: 0 0 82vw;
             }
 
             /* Therapist cards */
@@ -1180,7 +1177,6 @@
                 <li><a href="#services">SERVICES</a></li>
                 <li><a href="#life-skills">LIFE SKILLS FOR YOUNG PEOPLE</a></li>
                 <li><a href="#blog">BLOG</a></li>
-                <li><a href="https://cal.com/shalomtherapy/free-15-min-call" target="_blank" rel="noopener" class="nav-cta">Book a free 15-minute call</a></li>
             </ul>
         </div>
     </header>
@@ -1191,7 +1187,6 @@
             <h2 class="hero-subtitle">Professional Counselling Services</h2>
             <div class="hero-cta">
                 <a href="https://cal.com/shalomtherapy/free-15-min-call" target="_blank" rel="noopener" class="cta-button">Book a free 15-minute call</a>
-                <p class="hero-cta-note">Online over Google Meet &middot; times shown in your time zone</p>
             </div>
             <div class="hero-paths">
                 <div class="hero-path-card">
@@ -1210,7 +1205,7 @@
 
     <section id="about" class="about-section">
         <h2 class="section-title">Meet Our Therapists</h2>
-        <div class="therapists-grid">
+        <div class="therapists-grid" role="region" aria-label="Our therapists" tabindex="0">
             <div class="therapist-card">
                 <div class="therapist-image">
                     <img src="assets/manju_george.jpg" alt="Manju George, Counselling Psychologist at Shalom Therapy, Kochi" width="1079" height="875" loading="lazy" decoding="async">
@@ -1225,14 +1220,26 @@
             </div>
             <div class="therapist-card">
                 <div class="therapist-image">
+                    <img src="assets/sonal_patwal.jpg" alt="Sonal Patwal, Counselling Psychologist at Shalom Therapy" width="479" height="479" loading="lazy" decoding="async">
+                </div>
+                <div class="therapist-info">
+                    <h3>Sonal Patwal</h3>
+                    <h4>Counselling Psychologist</h4>
+                    <p>Sonal is a counsellor with extensive experience supporting the emotional well-being of children and adolescents. As a school counsellor, she has worked closely with students, families and educators on anxiety, academic stress, behavioural concerns, peer dynamics and emotional development.</p>
+                    <p>Alongside individual and group counselling, she has designed and led wellbeing workshops for school communities. Her approach is empathetic, confidential and evidence-based, tailored to each young person, with a strong belief in early intervention. She brings deep cultural insight and sensitivity to her work with culturally diverse families.</p>
+                    <p>Sonal is a member of the New Zealand Association of Counsellors (NZAC) and holds a current Annual Practising Certificate (APC).</p>
+                </div>
+            </div>
+            <div class="therapist-card">
+                <div class="therapist-image">
                     <img src="assets/manushi_pfp.png" alt="Manushi Parwani, Counselling Psychologist at Shalom Therapy" width="1036" height="978" loading="lazy" decoding="async">
                 </div>
                 <div class="therapist-info">
                     <h3>Manushi Parwani</h3>
                     <h4>Counselling Psychologist</h4>
-                    <p>Manushi is a counselling psychologist and life-skills trainer with expertise in providing safe spaces for emotional exploration and growth. With an M.Sc. in Counselling Psychology from CHRIST (Deemed to be) University, Delhi-NCR, and certification as a Person-Centered Therapist, she has trained under Meenakshi Kirtane (Director Psychodrama Institute of India and Maanas- The Inside Story).</p>
-                    <p>Her therapeutic approach is deeply-rooted in the Rogerian belief of humanistic approach and empathy. She uses an eclectic approach in her sessions, incorporating Person-centered Therapy and Solution-focused approach at its core. She has worked with clients ranging from 9 years old to 45 years old, with particular expertise in substance use issues, relationship issues, and anger management.</p>
-                    <p>If you are looking for a safe space to share and explore your thoughts, feelings and emotions, Manushi provides compassionate, client-focused support to help you navigate life's challenges.</p>
+                    <p>Manushi is a counselling psychologist and life-skills trainer. She holds an M.Sc. in Counselling Psychology from CHRIST (Deemed to be) University, Delhi-NCR, is certified as a Person-Centered Therapist, and trained under Meenakshi Kirtane (Director, Psychodrama Institute of India and Maanas &ndash; The Inside Story).</p>
+                    <p>Her approach is rooted in the Rogerian, humanistic tradition, drawing on person-centered and solution-focused therapy. She has worked with clients aged 9 to 45, with particular expertise in substance use, relationship issues and anger management.</p>
+                    <p>She offers a safe, compassionate space to explore your thoughts and feelings and navigate life's challenges.</p>
                 </div>
             </div>
         </div>
