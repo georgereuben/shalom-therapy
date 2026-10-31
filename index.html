@@ -44,7 +44,7 @@
       "priceRange": "\u20b9\u20b9",
       "sameAs": [
         "https://www.facebook.com/shalomtherapy",
-        "https://www.instagram.com/shalomtherapy"
+        "https://www.instagram.com/shalomtherapy_/"
       ]
     }
     </script>
@@ -177,6 +177,26 @@
         .nav-menu a.active {
             color: #c3b1a9;
         }
+
+        /* Header booking button */
+        .nav-menu {
+            align-items: center;
+            flex-wrap: wrap;
+            row-gap: 10px;
+        }
+
+        .nav-menu a.nav-cta {
+            display: inline-block;
+            background-color: #4a4a4a;
+            color: #f8f6f2;
+            padding: 10px 18px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .nav-menu a.nav-cta:hover {
+            background-color: #2d2d2d;
+            color: #ffffff;
+        }
         
         /* Hero Section */
         .hero-section {
@@ -209,6 +229,17 @@
             color: #4a4a4a;
             margin-top: 0;
             margin-bottom: 30px;
+        }
+
+        /* Hero booking button */
+        .hero-cta {
+            margin: 0 auto 10px;
+        }
+
+        .hero-cta-note {
+            font-size: 14px;
+            color: #5a5a5a;
+            margin: 12px 0 0;
         }
 
         /* Hero path cards */
@@ -372,6 +403,25 @@
             color: #777;
         }
 
+        .services-cta {
+            text-align: center;
+            margin-top: 50px;
+            padding: 0 20px;
+        }
+
+        .services-cta p {
+            margin: 16px 0 0;
+            font-size: 15px;
+            color: #6a6a6a;
+        }
+
+        .services-cta p a {
+            color: #4a4a4a;
+            text-decoration: underline;
+            text-decoration-color: #c3b1a9;
+            text-underline-offset: 3px;
+        }
+
         /* Life Skills Section */
         .life-skills-section {
             padding: 80px 0;
@@ -509,6 +559,23 @@
         .btn:hover {
             background-color: #c3b1a9;
             color: #4a4a4a;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: #4a4a4a;
+            color: #f8f6f2;
+            padding: 15px 40px;
+            text-decoration: none;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 14px;
+            transition: background-color 0.3s;
+        }
+
+        .cta-button:hover {
+            background-color: #2d2d2d;
         }
         
         /* About Section */
@@ -737,6 +804,17 @@
             display: inline-block;
             margin-right: 5px;
         }
+
+        .contact-info a {
+            color: #4a4a4a;
+            text-decoration: underline;
+            text-decoration-color: #c3b1a9;
+            text-underline-offset: 3px;
+        }
+
+        .contact-info a:hover {
+            color: #2d2d2d;
+        }
         
         .contact-hours {
             margin-top: 20px;
@@ -789,8 +867,8 @@
             transform: translateY(-2px);
         }
 
-        /* Calendly Booking Button */
-        .calendly-button {
+        /* Booking Buttons (Cal.com) */
+        .booking-button {
             display: inline-block;
             background-color: #e2d3c8;
             color: #4a4a4a;
@@ -811,12 +889,36 @@
             box-sizing: border-box;
         }
 
-        .calendly-button:hover {
+        .booking-button:hover {
             background-color: #c3b1a9;
             color: #4a4a4a;
             transform: translateY(-2px);
         }
         
+        .booking-button-primary {
+            background-color: #4a4a4a;
+            color: #f8f6f2;
+        }
+
+        .booking-button-primary:hover {
+            background-color: #2d2d2d;
+            color: #ffffff;
+        }
+
+        .booking-note {
+            font-size: 14px;
+            color: #6a6a6a;
+            margin: 0;
+            text-align: center;
+        }
+
+        .booking-note a {
+            color: #4a4a4a;
+            text-decoration: underline;
+            text-decoration-color: #c3b1a9;
+            text-underline-offset: 3px;
+        }
+
         .booking-options {
             display: flex;
             flex-direction: column;
@@ -1078,7 +1180,7 @@
                 <li><a href="#services">SERVICES</a></li>
                 <li><a href="#life-skills">LIFE SKILLS FOR YOUNG PEOPLE</a></li>
                 <li><a href="#blog">BLOG</a></li>
-                <li><a href="#contact">BOOK NOW</a></li>
+                <li><a href="https://cal.com/shalomtherapy/free-15-min-call" target="_blank" rel="noopener" class="nav-cta">Book a free 15-minute call</a></li>
             </ul>
         </div>
     </header>
@@ -1087,6 +1189,10 @@
         <div class="hero-content">
             <h1 class="hero-title">Shalom Therapy</h1>
             <h2 class="hero-subtitle">Professional Counselling Services</h2>
+            <div class="hero-cta">
+                <a href="https://cal.com/shalomtherapy/free-15-min-call" target="_blank" rel="noopener" class="cta-button">Book a free 15-minute call</a>
+                <p class="hero-cta-note">Online over Google Meet &middot; times shown in your time zone</p>
+            </div>
             <div class="hero-paths">
                 <div class="hero-path-card">
                     <h3>Counselling &amp; Therapy</h3>
@@ -1160,6 +1266,10 @@
                 <p>Specialized assistance for children with exceptional needs and their families, using individualized strategies developed through extensive experience in special education.</p>
             </div>
         </div>
+        <div class="services-cta">
+            <a href="https://cal.com/shalomtherapy/50-min-session" target="_blank" rel="noopener" class="cta-button">Book a session</a>
+            <p>New to Shalom Therapy? Start with a <a href="https://cal.com/shalomtherapy/free-15-min-call" target="_blank" rel="noopener">free 15-minute call</a>.</p>
+        </div>
     </section>
 
     <section id="life-skills" class="life-skills-section">
@@ -1211,7 +1321,7 @@
         </div>
 
         <div class="life-skills-cta">
-            <a href="#contact">Book a Free Discovery Call</a>
+            <a href="https://cal.com/shalomtherapy/free-15-min-call" target="_blank" rel="noopener">Book a Free Discovery Call</a>
         </div>
     </section>
 
@@ -1274,6 +1384,7 @@
         }
         .faq-item[open] summary::after { content: '\2212'; }
         .faq-item p { margin: 0 0 22px 0; color: #6a6a6a; font-size: 16px; line-height: 1.7; }
+        .faq-item p a { color: #4a4a4a; text-decoration: underline; text-decoration-color: #c3b1a9; text-underline-offset: 3px; }
     </style>
     <section id="faq" class="faq-section">
         <h2 class="section-title">Frequently Asked Questions</h2>
@@ -1287,7 +1398,7 @@
         </details>
         <details class="faq-item">
             <summary>How much does a counselling session cost?</summary>
-            <p>We offer a free initial consultation so you can decide if it feels right before committing. Session fees are kept affordable and are shared when you book. You can book a free discovery call online to discuss your needs and pricing.</p>
+            <p>We offer a free initial consultation so you can decide if it feels right before committing. Session fees are kept affordable and are shared when you book. You can <a href="https://cal.com/shalomtherapy/free-15-min-call" target="_blank" rel="noopener">book a free discovery call</a> online to discuss your needs and pricing. Ready to begin? <a href="https://cal.com/shalomtherapy/50-min-session" target="_blank" rel="noopener">Book a session</a>.</p>
         </details>
         <details class="faq-item">
             <summary>Is what I share in therapy confidential?</summary>
@@ -1299,7 +1410,7 @@
         </details>
         <details class="faq-item">
             <summary>How do I book a session?</summary>
-            <p>You can schedule online through our booking link, or send a message via the contact form below. We'll get back to you to confirm a time that works for you.</p>
+            <p>You can book online: start with a <a href="https://cal.com/shalomtherapy/free-15-min-call" target="_blank" rel="noopener">free 15-minute call</a>, or <a href="https://cal.com/shalomtherapy/50-min-session" target="_blank" rel="noopener">book a 50-minute session</a>. Sessions take place over Google Meet, and booking times are shown in your own time zone. You can also send a message via the contact form below, and we'll get back to you to confirm a time that works for you.</p>
         </details>
     </section>
 
@@ -1309,8 +1420,9 @@
             <div class="contact-info">
                 <h3>Get in Touch</h3>
                 <p>We're here to answer your questions and help you begin your journey toward improved mental health and wellbeing.</p>
-                <p><span class="contact-label">Email:</span> info@shalom-therapy.com</p>
+                <p><span class="contact-label">Email:</span> <a href="mailto:hello@shalom-therapy.com">hello@shalom-therapy.com</a></p>
                 <p><span class="contact-label">Phone:</span> +91 7907290207</p>
+                <p><span class="contact-label">Instagram:</span> <a href="https://www.instagram.com/shalomtherapy_/" target="_blank" rel="noopener">@shalomtherapy_</a></p>
                 <p><span class="contact-label">Location:</span> Kochi, Kerala, India</p>
                 <div class="contact-hours">
                     <p><span class="contact-label">Hours:</span></p>
@@ -1322,11 +1434,11 @@
             <div class="contact-form">
                 <h3>Book a Free Consultation</h3>
 
-                <!-- Calendly Booking Button -->
+                <!-- Booking buttons (Cal.com) -->
                 <div class="booking-options">
-                    <a href="https://calendly.com/manjugeorge-shalomtherapy/50-mins-session" target="_blank" class="calendly-button">
-                        SCHEDULE ONLINE - BOOK NOW
-                    </a>
+                    <a href="https://cal.com/shalomtherapy/free-15-min-call" target="_blank" rel="noopener" class="booking-button booking-button-primary">Book a free 15-minute call</a>
+                    <a href="https://cal.com/shalomtherapy/50-min-session" target="_blank" rel="noopener" class="booking-button">Book a session (50 minutes)</a>
+                    <p class="booking-note">Sessions are online over Google Meet, and times are shown in your time zone. <a href="https://cal.com/shalomtherapy" target="_blank" rel="noopener">See all booking options</a></p>
                 </div>
 
                 <div class="booking-divider">
@@ -1373,6 +1485,15 @@
 <li><a href="#services">Relationship Counselling</a></li>
                     <li><a href="#services">Special Needs Support</a></li>
                     <li><a href="#life-skills">Life Skills for Young People</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Get in Touch</h4>
+                <ul>
+                    <li><a href="https://cal.com/shalomtherapy/free-15-min-call" target="_blank" rel="noopener">Book a free 15-minute call</a></li>
+                    <li><a href="https://cal.com/shalomtherapy/50-min-session" target="_blank" rel="noopener">Book a session</a></li>
+                    <li><a href="mailto:hello@shalom-therapy.com">hello@shalom-therapy.com</a></li>
+                    <li><a href="https://www.instagram.com/shalomtherapy_/" target="_blank" rel="noopener">Instagram: @shalomtherapy_</a></li>
                 </ul>
             </div>
         </div>
@@ -1461,6 +1582,7 @@
           "image": "https://www.shalom-therapy.com/assets/shalom-therapy-og-image.jpg",
           "url": "https://www.shalom-therapy.com",
           "telephone": "+91 7907290207",
+          "email": "hello@shalom-therapy.com",
           "description": "Professional online counselling and life skills training for young people in Kochi by Manju George. Expert therapist offering therapy for anxiety, stress, relationships, personal growth, and life skills programmes for teens and children living abroad and children with special needs.",
           "address": {
             "@type": "PostalAddress",
@@ -1492,7 +1614,7 @@
           "priceRange": "\u20b9\u20b9",
           "sameAs": [
             "https://www.facebook.com/shalomtherapy",
-            "https://www.instagram.com/shalomtherapy"
+            "https://www.instagram.com/shalomtherapy_/"
           ],
           "aggregateRating": {
             "@type": "AggregateRating",
@@ -1645,7 +1767,7 @@
               "name": "How much does a counselling session cost?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "We offer a free initial consultation so you can decide if it feels right before committing. Session fees are kept affordable and are shared when you book. You can book a free discovery call online to discuss your needs and pricing."
+                "text": "We offer a free initial consultation so you can decide if it feels right before committing. Session fees are kept affordable and are shared when you book. You can book a free discovery call online to discuss your needs and pricing. Ready to begin? Book a session."
               }
             },
             {
@@ -1669,7 +1791,7 @@
               "name": "How do I book a session?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "You can schedule online through our booking link, or send a message via the contact form. We'll get back to you to confirm a time that works for you."
+                "text": "You can book online: start with a free 15-minute call, or book a 50-minute session. Sessions take place over Google Meet, and booking times are shown in your own time zone. You can also send a message via the contact form, and we'll get back to you to confirm a time that works for you."
               }
             }
           ]
